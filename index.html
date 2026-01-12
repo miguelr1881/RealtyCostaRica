@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realty Costa Rica - Tu Hogar Te Espera</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.jpg" alt="Realty Costa Rica">
+            </div>
+            <div class="nav-right">
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="es">ES</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Brand Landing Section -->
+    <section class="brand-landing">
+        <div class="brand-content">
+            <img src="logo.jpg" alt="Realty Costa Rica" class="brand-logo">
+            <p class="brand-tagline" data-i18n="brand_tagline">Tu socio inmobiliario de confianza</p>
+            <div class="scroll-indicator">
+                <div class="scroll-text" data-i18n="discover_more">Descubre más</div>
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title" data-i18n="hero_title">Hacemos Realidad tus Metas Inmobiliarias</h1>
+            <div class="hero-goals">
+                <div class="goal-column">
+                    <div class="goal-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 data-i18n="goal_buy_rent">Encuentra tu Hogar Ideal</h3>
+                    <p data-i18n="goal_buy_rent_desc">Te ayudamos a encontrar alquileres o comprar la propiedad perfecta para ti</p>
+                </div>
+                <div class="goal-column">
+                    <div class="goal-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3 data-i18n="goal_sell_rent">Vende o Alquila tu Propiedad</h3>
+                    <p data-i18n="goal_sell_rent_desc">Te ayudamos a vender o alquilar tus propiedades de manera rápida y segura</p>
+                </div>
+            </div>
+            <a href="https://wa.me/50672688922?text=Hola%20Realty%20Costa%20Rica!%20Me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20inmobiliaria." target="_blank" class="cta-button-green">
+                <i class="fab fa-whatsapp"></i>
+                <span data-i18n="contact_whatsapp">Contáctanos hoy y comienza tu viaje inmobiliario</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="carousel-section fade-in-element">
+        <div class="section-header fade-in-element">
+            <h2 data-i18n="featured_properties">Propiedades Destacadas</h2>
+        </div>
+        <div class="carousel-container" id="carousel">
+            <div class="carousel-track">
+                <div class="carousel-slide fade-in-element">
+                    <div class="property-card">
+                        <a href="https://www.instagram.com/p/C6CPGX5P-Yp/" target="_blank" class="property-image-link">
+                            <img src="post1.jpg" alt="La Amada Residential">
+                        </a>
+                        <div class="property-info">
+                            <h3>La Amada Residential</h3>
+                            <p class="location">Heredia</p>
+                            <div class="details">
+                                <span><i class="fas fa-door-open"></i> 3 <span data-i18n="rooms">Cuartos</span></span>
+                                <span><i class="fas fa-bath"></i> 3.5 <span data-i18n="bathrooms">Baños</span></span>
+                                <span><i class="fas fa-expand"></i> 280 m²</span>
+                            </div>
+                            <div class="pricing">
+                                <p class="price">$380,000</p>
+                                <p class="hoa">HOA: ¢35,000 CRC</p>
+                            </div>
+                        </div>
+                        <a href="https://www.instagram.com/p/C6CPGX5P-Yp/" target="_blank" class="property-link" data-i18n="view_ig">Ver en Instagram</a>
+                    </div>
+                </div>
+                <div class="carousel-slide fade-in-element">
+                    <div class="property-card">
+                        <a href="https://www.instagram.com/p/DIHJO92MWBP/" target="_blank" class="property-image-link">
+                            <img src="post2.jpg" alt="Apartamento Amueblado">
+                        </a>
+                        <div class="property-info">
+                            <h3 data-i18n="furnished_apartment">Apartamento Amueblado</h3>
+                            <p class="location">Escazú</p>
+                            <div class="details">
+                                <span><i class="fas fa-door-open"></i> 1 <span data-i18n="room">Cuarto</span></span>
+                                <span><i class="fas fa-bath"></i> 2 <span data-i18n="bathrooms">Baños</span></span>
+                                <span><i class="fas fa-expand"></i> 95 m²</span>
+                            </div>
+                            <div class="pricing">
+                                <p class="price">$850</p>
+                            </div>
+                        </div>
+                        <a href="https://www.instagram.com/p/DIHJO92MWBP/" target="_blank" class="property-link" data-i18n="view_ig">Ver en Instagram</a>
+                    </div>
+                </div>
+                <div class="carousel-slide fade-in-element">
+                    <div class="property-card">
+                        <a href="https://www.instagram.com/p/DHZ2SHSs41a/" target="_blank" class="property-image-link">
+                            <img src="post3.jpg" alt="Consultorio Momentum">
+                        </a>
+                        <div class="property-info">
+                            <h3 data-i18n="office_consulting">Consultorio / Oficina</h3>
+                            <p class="location">Momentum Escazú</p>
+                            <div class="details">
+                                <span><i class="fas fa-door-open"></i> 2 <span data-i18n="rooms">Cuartos</span></span>
+                                <span><i class="fas fa-bath"></i> 0.5 <span data-i18n="bathroom">Baño</span></span>
+                                <span><i class="fas fa-expand"></i> 42 m²</span>
+                            </div>
+                            <div class="pricing">
+                                <p class="price">$1,100</p>
+                            </div>
+                        </div>
+                        <a href="https://www.instagram.com/p/DHZ2SHSs41a/" target="_blank" class="property-link" data-i18n="view_ig">Ver en Instagram</a>
+                    </div>
+                </div>
+                <div class="carousel-slide fade-in-element">
+                    <div class="property-card">
+                        <a href="https://www.instagram.com/p/DQ5lpuZkTgC/" target="_blank" class="property-image-link">
+                            <img src="post4.jpg" alt="Apartamento Senderos de Chirca">
+                        </a>
+                        <div class="property-info">
+                            <h3 data-i18n="luxury_apartment">Apartamento Lujoso</h3>
+                            <p class="location">Senderos de Chirca, Escazú</p>
+                            <div class="details">
+                                <span><i class="fas fa-door-open"></i> 3 <span data-i18n="rooms">Cuartos</span></span>
+                                <span><i class="fas fa-bath"></i> 3.5 <span data-i18n="bathrooms">Baños</span></span>
+                                <span><i class="fas fa-expand"></i> 250 m²</span>
+                            </div>
+                            <div class="pricing">
+                                <p class="price">$2,600</p>
+                            </div>
+                        </div>
+                        <a href="https://www.instagram.com/p/DQ5lpuZkTgC/" target="_blank" class="property-link" data-i18n="view_ig">Ver en Instagram</a>
+                    </div>
+                </div>
+                <div class="carousel-slide fade-in-element">
+                    <div class="property-card">
+                        <a href="https://www.instagram.com/p/DMQ1Olsvl0W/" target="_blank" class="property-image-link">
+                            <img src="post5.jpg" alt="Apartamento Torre Los Yoses">
+                        </a>
+                        <div class="property-info">
+                            <h3 data-i18n="furnished_apartment">Apartamento Amueblado</h3>
+                            <p class="location">Torre Los Yoses</p>
+                            <div class="details">
+                                <span><i class="fas fa-door-open"></i> 1 <span data-i18n="room">Cuarto</span></span>
+                                <span><i class="fas fa-bath"></i> 1 <span data-i18n="bathroom">Baño</span></span>
+                                <span><i class="fas fa-expand"></i> 95 m²</span>
+                            </div>
+                            <div class="pricing">
+                                <p class="price">$850</p>
+                            </div>
+                        </div>
+                        <a href="https://www.instagram.com/p/DMQ1Olsvl0W/" target="_blank" class="property-link" data-i18n="view_ig">Ver en Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn prev" id="prevBtn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn next" id="nextBtn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="carousel-dots" id="dots"></div>
+    </section>
+
+    <!-- Social Section -->
+    <section class="social-section">
+        <div class="social-container">
+            <h2 class="fade-in-element" data-i18n="social_title">Síguenos</h2>
+            <p class="social-subtitle fade-in-element" data-i18n="social_subtitle">Mantente al día con nuestras últimas propiedades</p>
+            <div class="social-buttons">
+                <a href="https://www.instagram.com/realtycostarica" target="_blank" class="social-btn fade-in-element instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span data-i18n="follow_instagram">Síguenos en Instagram</span>
+                </a>
+                <a href="https://www.facebook.com/share/1McWwrZNo8/?mibextid=wwXIfr" target="_blank" class="social-btn fade-in-element facebook">
+                    <i class="fab fa-facebook"></i>
+                    <span data-i18n="follow_facebook">Síguenos en Facebook</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h2 class="fade-in-element" data-i18n="about_us_title">Conoce a Nuestro Equipo</h2>
+        <p class="about-subtitle fade-in-element" data-i18n="about_us_subtitle">Tres profesionales comprometidos con tu éxito inmobiliario</p>
+        <div class="team-grid">
+            <div class="team-member fade-in-element">
+                <div class="member-image">
+                    <img src="said.png" alt="Said Samara">
+                </div>
+                <div class="member-info">
+                    <h3 data-i18n="founder_1_name">Said Samara, MBA</h3>
+                    <p class="member-title" data-i18n="founder_1_title">Co-fundador</p>
+                    <p class="member-bio" data-i18n="founder_1_bio">Experto en bienes raíces con más de 10 años de experiencia en el mercado costarricense</p>
+                </div>
+            </div>
+            <div class="team-member fade-in-element">
+                <div class="member-image">
+                    <img src="founder2.jpg" alt="Fundador 2">
+                </div>
+                <div class="member-info">
+                    <h3 data-i18n="founder_2_name">María González</h3>
+                    <p class="member-title" data-i18n="founder_2_title">Co-fundadora</p>
+                    <p class="member-bio" data-i18n="founder_2_bio">Especialista en propiedades residenciales y comerciales de lujo</p>
+                </div>
+            </div>
+            <div class="team-member fade-in-element">
+                <div class="member-image">
+                    <img src="founder3.jpg" alt="Fundador 3">
+                </div>
+                <div class="member-info">
+                    <h3 data-i18n="founder_3_name">Carlos Ramírez</h3>
+                    <p class="member-title" data-i18n="founder_3_title">Co-fundador</p>
+                    <p class="member-bio" data-i18n="founder_3_bio">Asesor financiero inmobiliario con amplio conocimiento del mercado</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p data-i18n="footer_text">&copy; 2026 Realty Costa Rica. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/realtycostarica" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1McWwrZNo8/?mibextid=wwXIfr" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://wa.me/50672688922" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="brand.js"></script>
+    <script src="carousel.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "realty-costa-rica",
+  "version": "1.0.0",
+  "description": "Realty Costa Rica - Landing Page",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000 --directory .",
+    "dev": "open http://localhost:8000 && python3 -m http.server 8000 --directory ."
+  },
+  "keywords": [
+    "real estate",
+    "costa rica",
+    "properties"
+  ],
+  "author": "Realty Costa Rica",
+  "license": "MIT"
+}
