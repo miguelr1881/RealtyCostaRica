@@ -23,9 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroSection = document.querySelector('.hero');
     const brandLanding = document.querySelector('.brand-landing');
     const navbar = document.querySelector('.navbar');
+    const brandVideo = document.getElementById('brandVideo');
+    const brandContent = document.querySelector('.brand-content');
     
     // Detectar si es móvil
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+    
+    let videoReady = false;
+    let videoEnded = false;
     
     // Función de scroll optimizada
     function scrollToHero() {
@@ -64,13 +69,54 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    // Auto-scroll suave después de 2 segundos
-    setTimeout(() => {
-        if (window.scrollY === 0 && !hasAutoScrolled) {
-            hasAutoScrolled = true;
-            scrollToHero();
+    // Gestión del video y auto-scroll
+    if (brandVideo) {
+        // Intentar reproducir el video manualmente por si acaso
+        const playPromise = brandVideo.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                console.log('Auto-play prevented:', error);
+            });
         }
-    }, 2000);
+        
+        // Marcar video como listo y mostrar flechas
+        brandVideo.addEventListener('loadeddata', () => {
+            videoReady = true;
+            // Mostrar tagline y scroll indicator cuando el video esté listo
+            const brandTagline = document.querySelector('.brand-tagline');
+            if (brandTagline) {
+                brandTagline.style.opacity = '1';
+            }
+            if (scrollIndicator) {
+                scrollIndicator.style.opacity = '1';
+            }
+        });
+        
+        // Auto-scroll cuando el video termine
+        brandVideo.addEventListener('ended', () => {
+            videoEnded = true;
+            if (window.scrollY === 0 && !hasAutoScrolled) {
+                hasAutoScrolled = true;
+                setTimeout(() => scrollToHero(), 300); // Pequeño delay para suavizar
+            }
+        });
+        
+        // Fallback: si el video no termina o hay problemas, hacer scroll después de 7 segundos
+        setTimeout(() => {
+            if (window.scrollY === 0 && !hasAutoScrolled && !videoEnded) {
+                hasAutoScrolled = true;
+                scrollToHero();
+            }
+        }, 7000);
+    } else {
+        // Si no hay video, scroll después de 4 segundos
+        setTimeout(() => {
+            if (window.scrollY === 0 && !hasAutoScrolled) {
+                hasAutoScrolled = true;
+                scrollToHero();
+            }
+        }, 4000);
+    }
     
     // Click manual en scroll indicator
     if (scrollIndicator && heroSection) {
