@@ -175,6 +175,25 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroSection) {
         heroObserver.observe(heroSection);
     }
+    
+    // Observer para reemplazar video por logo cuando brand landing esté completamente fuera de vista
+    const brandObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting && brandVideo && videoEnded) {
+                // La sección brand está completamente fuera de vista
+                const img = document.createElement('img');
+                img.src = 'logo.jpg';
+                img.className = 'brand-logo';
+                img.alt = 'Realty Costa Rica';
+                brandVideo.parentNode.replaceChild(img, brandVideo);
+                brandObserver.disconnect(); // Dejar de observar
+            }
+        });
+    }, { threshold: 0 }); // threshold: 0 significa que se activa cuando está completamente fuera
+    
+    if (brandLanding) {
+        brandObserver.observe(brandLanding);
+    }
 });
 
 // Prevenir auto-scroll si usuario ya scrolleó manualmente
