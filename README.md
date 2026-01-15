@@ -1,11 +1,11 @@
 # 🏡 Realty Costa Rica - Landing Page
 
-Una landing page elegante y moderna para Realty Costa Rica, inspirada en el diseño Apple con animaciones lujosas.
+Una landing page elegante y moderna para Realty Costa Rica.
 
 ## 📋 Características
 
 ✨ **Diseño Elegante**
-- Estilo Apple moderno con animaciones fluidas
+- Estilo moderno con animaciones fluidas
 - Paleta de colores verde tropical (inspirada en Instagram de Realty Costa Rica)
 - Completamente responsivo
 
@@ -124,8 +124,6 @@ Puedes modificarlo en `index.html` en el link de WhatsApp.
 
 ## 📝 Notas
 
-- Las imágenes del carrusel son placeholders (unsplash)
-- El sitio es completamente estático (sin backend requerido)
 - Compatible con navegadores modernos (Chrome, Safari, Firefox, Edge)
 
 ## 📄 Licencia
@@ -133,5 +131,3 @@ Puedes modificarlo en `index.html` en el link de WhatsApp.
 MIT
 
 ---
-
-**Creado con ❤️ para Realty Costa Rica**
